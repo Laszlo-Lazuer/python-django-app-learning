@@ -42,6 +42,12 @@ def pending_task(request, task_id):
     task.save()
     return redirect('todolist')
 
+def index(request):
+    context= {
+        'index_text':"Welcome Index Page"
+    }
+    return render(request, 'index.html', context)
+
 def edit_task(request, task_id):
     if request.method == "POST":
         task = TaskList.objects.get(pk=task_id)
