@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "todolist_app",
+    "users_app",
     "crispy_forms",
     "crispy_bootstrap5",
 ]
