@@ -13,6 +13,7 @@
         <label class="col-lg-2"></label>
         <div class="col-lg-6">
             <input type="text" class="form-control" name="task" placeholder="{{ task_obj.task}}" value="{{ task_obj.task }}">
+            <input type="hidden" name="done" value="{{ task_obj.done }}" />
         </div>
         <button type="submit" class="btn btn-primary col-lg-2">Update Task</button>
     </form>
