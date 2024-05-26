@@ -24,6 +24,18 @@ def delete_task(request, task_id):
     task.delete()
     return redirect('todolist')
 
+def complete_task(request, task_id):
+    task = TaskList.objects.get(pk=task_id)
+    task.done = True
+    task.save()
+    return redirect('todolist')
+
+def pending_task(request, task_id):
+    task = TaskList.objects.get(pk=task_id)
+    task.done = False
+    task.save()
+    return redirect('todolist')
+
 def edit_task(request, task_id):
     if request.method == "POST":
         task = TaskList.objects.get(pk=task_id)
